@@ -10,6 +10,7 @@
       <div class="navbar-nav">
         <a v-on:click="incrementClicks" class="nav-item nav-link active" href="embark"><div class = "nav-text">Death Quiz</div></a>
         <router-link v-on:click="incrementClicks" class="nav-item nav-link active" to="/kanye">Kayne Quotes</router-link>
+        <div class="nav-item nav-link active" v-on:click="incrementClicks">Clicks: {{clicks}}</div>
       </div>
     </div>
   </nav>
@@ -23,15 +24,30 @@
 <script>
 export default {
   methods: {
-
     incrementClicks() {
+      console.log("yo");
       this.$root.$data.numButtonsClicked++
     }
   },
+  computed: {
+    clicks() {
+      return this.$root.$data.numButtonsClicked;
+    }
+  }
 }
 </script>
 
 <style>
+.nav-item{
+  user-select: none;
+  cursor: pointer;
+}
+
+.nav-item:active, .navbar-brand:active{
+
+  color: yellow !important;
+}
+
 .home{
     display: flex;
     min-height: 100vh;

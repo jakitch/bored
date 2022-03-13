@@ -7,7 +7,7 @@
     Bored?
   </typewriter>
   <div class="button" v-on:click="switchToRandomPage">Click Me</div>
-  <h2>Number of buttons clicked: {{numButtonsClicked}}</h2>
+  <h2>Number of buttons clicked: <br>{{numButtonsClicked}}</h2>
 </div>
 </template>
 
@@ -62,6 +62,7 @@ export default {
 
 .wrapper h2 {
   padding: 20px;
+  font-size: 25px;
 }
 
 .button {
@@ -77,11 +78,27 @@ export default {
   color: white;
 }
 
+.button:hover {
+    background-color: gray;
+}
+
+.button:active {
+    background-color: black;
+}
+
 @media (max-width: 450px) {
 
   .bored-type {
     font-size: 50px;
     margin-bottom: 25px;
+  }
+
+  .button:hover {
+        background-color: black;
+  }
+
+  .button:active {
+    background-color: gray;
   }
 }
 </style>

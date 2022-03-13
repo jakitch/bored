@@ -98,7 +98,7 @@ export default {
 @media (max-width: 450px) {
 
     .wrapper h1 {
-        font-size: 40px;
+        font-size: 30px;
         margin: 15px;
     }
 
@@ -108,7 +108,8 @@ export default {
     }
 
     .wrapper h2 {
-        max-width: 100%;
+        max-width: 95%;
+        font-size: 25px;
     }
 
     .button:hover {
@@ -117,6 +118,6 @@ export default {
 
     .button:active {
     background-color: gray;
-}
+    }
 }
 </style>
