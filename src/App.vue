@@ -15,7 +15,7 @@
     </div>
   </nav>
   <router-view class="view-content"/>
-  <footer id="foot"><a v-on:click="incrementClicks" class="git-link" href="https://github.com/jakitch/Mars"><img src='/images/gitlight.png'></a></footer>
+  <footer id="foot"><a v-on:click="incrementClicks" class="git-link" href="https://github.com/jakitch/bored"><img src='/images/gitlight.png'></a></footer>
 </div>
 </div>
 </template>
