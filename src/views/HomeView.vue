@@ -30,7 +30,7 @@ export default {
     switchToRandomPage() {
       this.$root.$data.numButtonsClicked++;
       if (Math.random() < 0.5)
-        this.$router.push('/mission')
+        this.$router.push('/quiz')
       else
         this.$router.push('/kanye')
     },

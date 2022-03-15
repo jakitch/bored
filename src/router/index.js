@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import KanyeView from '../views/KanyeView.vue'
+import QuizView from '../views/QuizView.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/kanye',
     name: 'kanye',
     component: KanyeView
+  },
+  {
+    path: '/quiz',
+    name: 'quiz',
+    component: QuizView
   },
 ]
 

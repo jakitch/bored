@@ -2,20 +2,20 @@
 <div class="wrapper">
   <div class="home">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <router-link class="navbar-brand" to="/" v-on:click="incrementClicks">Bored?</router-link>
+    <router-link class="navbar-brand" to="/"><div v-on:click="incrementClicks">Bored?</div></router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a v-on:click="incrementClicks" class="nav-item nav-link active" href="embark"><div class = "nav-text">Death Quiz</div></a>
-        <router-link v-on:click="incrementClicks" class="nav-item nav-link active" to="/kanye">Kayne Quotes</router-link>
+        <router-link  class="nav-item nav-link active" to="/quiz"><div v-on:click="incrementClicks">Death Quiz</div></router-link>
+        <router-link  class="nav-item nav-link active" to="/kanye"><div v-on:click="incrementClicks">Kanye Quotes</div></router-link>
         <div class="nav-item nav-link active" v-on:click="incrementClicks">Clicks: {{clicks}}</div>
       </div>
     </div>
   </nav>
   <router-view class="view-content"/>
-  <footer><a v-on:click="incrementClicks" class="git-link" href="https://github.com/jakitch/Mars"><img src='/images/gitlight.png'></a></footer>
+  <footer id="foot"><a v-on:click="incrementClicks" class="git-link" href="https://github.com/jakitch/Mars"><img src='/images/gitlight.png'></a></footer>
 </div>
 </div>
 </template>
@@ -25,7 +25,6 @@
 export default {
   methods: {
     incrementClicks() {
-      console.log("yo");
       this.$root.$data.numButtonsClicked++
     }
   },
@@ -38,6 +37,9 @@ export default {
 </script>
 
 <style>
+.navbar {
+  background-color: black !important;
+}
 .nav-item{
   user-select: none;
   cursor: pointer;
@@ -61,7 +63,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#ffffff00; 
+    background-color:black;/*#ffffff00;*/ 
     text-align: center;
     height: 55px;
     flex-shrink: 0;
